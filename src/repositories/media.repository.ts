@@ -268,7 +268,7 @@ export class MediaRepository extends Repository {
       options.video = defaultsDeep(options.video, {
         clips: [{ length: options.video.length, source_type: options.source_type }],
         poster_frame_index: 0,
-        audio_muted: false,
+        audio_muted: true,
         disable_oa_reuse: false,
       });
     }
@@ -483,7 +483,7 @@ export class MediaRepository extends Repository {
         source_width: options.width,
         source_height: options.height,
       },
-      audio_muted: false,
+      audio_muted: true,
       disable_oa_reuse: false,
       poster_frame_index: 0,
     });
@@ -591,7 +591,7 @@ export class MediaRepository extends Repository {
           source_type: options.source_type || '4',
         },
       ],
-      audio_muted: false,
+      audio_muted: true,
       disable_oa_reuse: false,
       poster_frame_index: 0,
       filter_type: '0',
