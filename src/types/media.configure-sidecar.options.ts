@@ -47,6 +47,7 @@ export interface MediaConfigureSidecarVideoItem extends MediaConfigureSidecarIte
   video_result?: string;
   date_time_original?: string;
   audio_muted?: string;
+  disable_oa_reuse?: string;
   clips?: Array<{ length: number; source_type: string }> | string;
   length: string;
   poster_frame_index?: string;

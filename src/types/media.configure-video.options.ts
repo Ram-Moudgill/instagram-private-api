@@ -6,6 +6,7 @@ export interface MediaConfigureVideoOptions {
   length: number;
   clips?: Array<{ length: number; source_type: string }>;
   audio_muted?: boolean;
+  disable_oa_reuse?: boolean;
   poster_frame_index?: number;
 
   width: number;

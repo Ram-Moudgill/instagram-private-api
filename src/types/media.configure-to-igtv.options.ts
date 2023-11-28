@@ -18,6 +18,7 @@ export interface MediaConfigureToIgtvOptions {
   igtv_share_preview_to_feed?: '1' | '0';
   clips?: Array<{ length: number; source_type: '3' | '4' }>;
   audio_muted?: boolean;
+  disable_oa_reuse?: boolean;
   poster_frame_index?: number;
   filter_type?: string;
   timezone_offset?: string;

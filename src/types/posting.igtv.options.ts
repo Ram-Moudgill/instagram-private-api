@@ -2,6 +2,7 @@ import { UploadVideoOptions } from './upload.video.options';
 import { MediaConfigureToIgtvOptions } from './media.configure-to-igtv.options';
 
 export interface PostingIgtvOptions {
+  disable_oa_reuse: boolean;
   // additional options for further configuration
   uploadOptions?: Partial<UploadVideoOptions>;
   configureOptions?: Partial<MediaConfigureToIgtvOptions>;
