@@ -261,6 +261,7 @@ export class MediaRepository extends Repository {
       clips?: Array<{ length: number; source_type: string }>;
       poster_frame_index?: number;
       audio_muted?: boolean;
+      disable_oa_reuse?: boolean;
     };
   }) {
     if (options.video) {
@@ -268,6 +269,7 @@ export class MediaRepository extends Repository {
         clips: [{ length: options.video.length, source_type: options.source_type }],
         poster_frame_index: 0,
         audio_muted: false,
+        disable_oa_reuse: false,
       });
     }
     const { body } = await this.client.request.send({
@@ -376,7 +378,7 @@ export class MediaRepository extends Repository {
       source_type: '4',
       device_id: this.client.state.deviceId,
       filter_type: '0',
-      audio_muted: false,
+      disable_oa_reuse: false,
       poster_frame_index: 0,
     });
 
@@ -482,6 +484,7 @@ export class MediaRepository extends Repository {
         source_height: options.height,
       },
       audio_muted: false,
+      disable_oa_reuse: false,
       poster_frame_index: 0,
     });
     // make sure source_type = 3
@@ -553,6 +556,7 @@ export class MediaRepository extends Repository {
           video_result: '',
           date_time_original: now,
           audio_muted: 'false',
+          disable_oa_reuse: 'false',
           clips: [{ length: item.length, source_type: '4' }],
           poster_frame_index: '0',
         });
@@ -588,6 +592,7 @@ export class MediaRepository extends Repository {
         },
       ],
       audio_muted: false,
+      disable_oa_reuse: false,
       poster_frame_index: 0,
       filter_type: '0',
       timezone_offset: this.client.state.timezoneOffset,

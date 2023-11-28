@@ -415,6 +415,7 @@ export class PublishService extends Repository {
       title: options.title,
       caption: options.caption,
       audio_muted: options.audioMuted,
+      disable_oa_reuse: options.disable_oa_reuse,
       length: videoInfo.duration / 1000.0,
       extra: {
         source_width: videoInfo.width,
